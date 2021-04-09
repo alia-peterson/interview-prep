@@ -18,7 +18,7 @@ export default function AnswerForm({ answerText, addAnswer }) {
         className='button-primary'
         onClick={(e) => addAnswer(e, answerField)}
         >
-        Add Answer
+        Update Answer
       </button>
     </form>
   )
