@@ -21,7 +21,7 @@ export default function Flashcard({ question, flipCard, showQuestion, addAnswer 
             className='button-primary'
             onClick={flipCard}
             >
-            Update Answer
+            Add Answer
           </button>
         </div> :
         <AnswerForm answerText={answer} addAnswer={addAnswer} />
