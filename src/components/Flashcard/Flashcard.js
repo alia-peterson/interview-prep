@@ -7,7 +7,7 @@ export default function Flashcard({ question, flipCard, showQuestion, addAnswer 
   if (question && question.a) {
     answer = question.a
   } else {
-    answer = 'what'
+    answer = ''
   }
 
   return (
@@ -15,9 +15,14 @@ export default function Flashcard({ question, flipCard, showQuestion, addAnswer 
       className='flashcard'
       >
       {showQuestion ?
-        <div>
-          {question && <p>{question.q}</p>}
-          <button onClick={flipCard}>Update Answer</button>
+        <div className='flashcard-body'>
+          {question && <div className='container-question'><p>{question.q}</p></div>}
+          <button
+            className='button-primary'
+            onClick={flipCard}
+            >
+            Update Answer
+          </button>
         </div> :
         <AnswerForm answerText={answer} addAnswer={addAnswer} />
       }

@@ -49,8 +49,8 @@ export default class App extends Component {
     if (newNumber === this.state.allQuestions.length) {
       return 0
 
-    } else if (newNumber === 0) {
-      return this.state.allQuestions.length
+    } else if (newNumber < 0) {
+      return this.state.allQuestions.length - 1
 
     } else {
       return newNumber
