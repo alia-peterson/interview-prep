@@ -1,9 +1,11 @@
 .button-left,
 .button-right {
-  background-color: transparent;
-  border: transparent;
+  background-color: #748CAB;
+  border: 2px solid #0D1321;
   border-radius: 100%;
   background-image: url('../../assets/arrow.png');
+  background-position: center;
+  background-size: contain;
   margin: 1rem;
   height: 64px;
   width: 64px;
@@ -11,13 +13,13 @@
 
 .button-left {
   transform: rotate(180deg);
-  box-shadow: -5px -5px 0px 0px #240828;
-  -webkit-box-shadow: -5px -5px 0px 0px #240828;
-  -moz-box-shadow: -5px -5px 0px 0px #240828;
+  box-shadow: -5px -5px 5px 0px #1D2D44;
+  -webkit-box-shadow: -5px -5px 5px 0px #1D2D44;
+  -moz-box-shadow: -5px -5px 5px 0px #1D2D44;
 }
 
 .button-right {
-  box-shadow: 5px 5px 0px 0px #240828;
-  -webkit-box-shadow: 5px 5px 0px 0px #240828;
-  -moz-box-shadow: 5px 5px 0px 0px #240828;
+  box-shadow: 5px 5px 5px 0px #1D2D44;
+  -webkit-box-shadow: 5px 5px 5px 0px #1D2D44;
+  -moz-box-shadow: 5px 5px 5px 0px #1D2D44;
 }

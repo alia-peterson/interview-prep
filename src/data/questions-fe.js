@@ -41,7 +41,7 @@ const questions = [
   },
   {
     id: 11,
-    q: 'What’s the difference between display: inline and display: inline-block?'
+    q: 'What’s the difference between `display: inline` and `display: inline-block`?'
   },
   {
     id: 12,
@@ -53,7 +53,7 @@ const questions = [
   },
   {
     id: 14,
-    q: 'If you have two elements inside of an outer containing element, one with float: left; and the other with float: right, how can you ensure that the containing element expands around the floated elements and does not collapse?'
+    q: 'If you have two elements inside of an outer containing element, one with `float: left;` and the other with `float: right;`, how can you ensure that the containing element expands around the floated elements and does not collapse?'
   },
   {
     id: 15,
@@ -65,7 +65,7 @@ const questions = [
   },
   {
     id: 17,
-    q: 'What’s the difference between <code class="language-plaintext highlighter-rouge">undefined</code> and <code class="language-plaintext highlighter-rouge">null</code>'
+    q: 'What’s the difference between `undefined` and `null`'
   },
   {
     id: 18,
@@ -77,11 +77,11 @@ const questions = [
   },
   {
     id: 20,
-    q: 'What is <code class="language-plaintext highlighter-rouge">"use strict";</code>? What are the advantages and disadvantages to using it?'
+    q: 'What is "use strict"? What are the advantages and disadvantages to using it?'
   },
   {
     id: 21,
-    q: 'Explain why the following doesn’t work as an IIFE: <code class="language-plaintext highlighter-rouge">function foo(){ }();</code>. What needs to be changed to properly make it an IIFE? Why?'
+    q: 'Explain why the following doesn’t work as an IIFE: <function foo(){ }();/>. What needs to be changed to properly make it an IIFE? Why?'
   },
   {
     id: 22,
@@ -97,7 +97,7 @@ const questions = [
   },
   {
     id: 25,
-    q: 'Why is it generally a good idea to position CSS <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code>s between <code class="language-plaintext highlighter-rouge">&lt;head&gt;&lt;/head&gt;</code> and JS <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code>s just before <code class="language-plaintext highlighter-rouge">&lt;/body&gt;</code>? Do you know any exceptions?'
+    q: 'Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?'
   },
   {
     id: 26,
@@ -109,7 +109,7 @@ const questions = [
   },
   {
     id: 28,
-    q: 'What’s the difference between <code class="language-plaintext highlighter-rouge">window.onload</code> and <code class="language-plaintext highlighter-rouge">onDocumentReady</code>'
+    q: 'What’s the difference between `window.onload` and `onDocumentReady`'
   },
   {
     id: 29,
@@ -117,7 +117,7 @@ const questions = [
   },
   {
     id: 30,
-    q: 'What could we use instead of <code class="language-plaintext highlighter-rouge">&lt;b&gt;</code> tags for bold and <code class="language-plaintext highlighter-rouge">&lt;i&gt;</code> tags for italics to make our HTML more semantic?'
+    q: 'What could we use instead of <b> tags for bold and <i> tags for italics to make our HTML more semantic?'
   },
   {
     id: 31,
@@ -213,7 +213,7 @@ const questions = [
   },
   {
     id: 54,
-    q: 'Explain how a branch works'
+    q: 'Explain how a branch works.'
   },
   {
     id: 55,
