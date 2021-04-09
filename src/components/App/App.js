@@ -19,19 +19,39 @@ export default class App extends Component {
 
   selectNextCard = (event) => {
     const buttonDirection = event.target.classList.value
-    const currentQuestionNumber = this.state.allQuestions.find((q, i) => {
-      if (q.id === this.state.currentQuestion.id) {
-        return i
-      } else {
-        return NaN
-      }
+    const currentQuestionNumber = this.state.allQuestions.findIndex(q => {
+      return q.id === this.state.currentQuestion.id
     })
 
-    if (buttonDirection.includes('right')) {
-      console.log(currentQuestionNumber);
-    } else if (buttonDirection.includes('left')) {
-      console.log(this.state.currentQuestion.id);
-      console.log(this.state.allQuestions);
+    let newQuestionNumber = this.incrementNumber(buttonDirection, currentQuestionNumber)
+
+    this.setState({
+      currentQuestion: this.state.allQuestions[newQuestionNumber]
+    })
+  }
+
+  incrementNumber = (buttonDirection, currentQuestionNumber) => {
+    let newNumber
+
+    if (buttonDirection.includes('left')) {
+      newNumber = currentQuestionNumber - 1
+
+    } else {
+      newNumber = currentQuestionNumber + 1
+    }
+
+    return this.checkNumberBounds(newNumber)
+  }
+
+  checkNumberBounds = (newNumber) => {
+    if (newNumber === this.state.allQuestions.length) {
+      return 0
+
+    } else if (newNumber === 0) {
+      return this.state.allQuestions.length
+
+    } else {
+      return newNumber
     }
   }
 
@@ -100,7 +120,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header
+          type={this.state.type}
+          toggleType={this.toggleQuestionType}
+          />
         <div className='container'>
           <Flashcard question={this.state.currentQuestion} />
           <div>
