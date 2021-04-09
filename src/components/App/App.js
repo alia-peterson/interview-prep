@@ -13,7 +13,8 @@ export default class App extends Component {
     this.state = {
       allQuestions: [],
       currentQuestion: {},
-      type: 'FE'
+      type: 'FE',
+      showQuestion: true
     }
   }
 
@@ -26,7 +27,8 @@ export default class App extends Component {
     let newQuestionNumber = this.incrementNumber(buttonDirection, currentQuestionNumber)
 
     this.setState({
-      currentQuestion: this.state.allQuestions[newQuestionNumber]
+      currentQuestion: this.state.allQuestions[newQuestionNumber],
+      showQuestion: true
     })
   }
 
@@ -53,6 +55,37 @@ export default class App extends Component {
     } else {
       return newNumber
     }
+  }
+
+  flipCard = () => {
+    let newView = true
+
+    if (this.state.showQuestion) {
+      newView = false
+    }
+
+    this.setState({ showQuestion: newView })
+  }
+
+  updateAnswer = (event, newAnswer) => {
+    event.preventDefault()
+    const currentQuestionNumber = this.state.allQuestions.findIndex(q => {
+      return q.id === this.state.currentQuestion.id
+    })
+
+    const updatedQuestion = this.state.allQuestions[currentQuestionNumber]
+    updatedQuestion.a = newAnswer
+
+    const updatedQuestions = this.state.allQuestions
+    updatedQuestions[currentQuestionNumber] = updatedQuestion
+
+    this.setState({
+      allQuestions: updatedQuestions,
+      currentQuestion: updatedQuestion
+    }, () => {
+      window.localStorage.setItem('interview-prep', JSON.stringify(this.state))
+      this.flipCard()
+    })
   }
 
   shuffleCards = () => {
@@ -124,13 +157,32 @@ export default class App extends Component {
           type={this.state.type}
           toggleType={this.toggleQuestionType}
           />
+
         <div className='container'>
-          <Flashcard question={this.state.currentQuestion} />
+          <Flashcard
+            question={this.state.currentQuestion}
+            flipCard={this.flipCard}
+            showQuestion={this.state.showQuestion}
+            addAnswer={this.updateAnswer}
+            />
+
           <div>
-            <Arrow direction='left' handleClick={this.selectNextCard} />
-            <Arrow direction='right' handleClick={this.selectNextCard} />
+            <Arrow
+              direction='left'
+              handleClick={this.selectNextCard}
+              />
+            <Arrow
+              direction='right'
+              handleClick={this.selectNextCard}
+              />
           </div>
-          <button onClick={this.shuffleCards}>Shuffle Cards</button>
+
+          <button
+            onClick={this.shuffleCards}
+            className='button-primary'
+            >
+            Shuffle Cards
+          </button>
         </div>
       </div>
     )

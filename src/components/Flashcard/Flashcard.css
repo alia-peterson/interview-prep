@@ -13,3 +13,15 @@
   -webkit-box-shadow: 10px 10px 0px 0px #240828;
   -moz-box-shadow: 10px 10px 0px 0px #240828;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 80%;
+}
+
+textarea {
+  height: 150px;
+}
