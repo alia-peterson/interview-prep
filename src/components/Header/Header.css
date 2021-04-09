@@ -1,6 +1,19 @@
 .header {
-  background-color: #37123C;
-  color: white;
+  align-items: center;
+  background-color: #0D1321;
+  color: #F0EBD8;
+  display: flex;
+  justify-content: space-between;
   height: 100px;
   width: 100%;
+}
+
+.header h1 {
+  margin-left: 1rem;
+}
+
+.button-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
