@@ -3,6 +3,8 @@ import './Header.css'
 
 export default function Header() {
   return (
-    <header className='header'></header>
+    <header className='header'>
+      <h1>Interview Prep!</h1>
+    </header>
   )
 }
