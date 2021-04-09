@@ -1,0 +1,23 @@
+.button-left,
+.button-right {
+  background-color: transparent;
+  border: transparent;
+  border-radius: 100%;
+  background-image: url('../../assets/arrow.png');
+  margin: 1rem;
+  height: 64px;
+  width: 64px;
+}
+
+.button-left {
+  transform: rotate(180deg);
+  box-shadow: -5px -5px 0px 0px #240828;
+  -webkit-box-shadow: -5px -5px 0px 0px #240828;
+  -moz-box-shadow: -5px -5px 0px 0px #240828;
+}
+
+.button-right {
+  box-shadow: 5px 5px 0px 0px #240828;
+  -webkit-box-shadow: 5px 5px 0px 0px #240828;
+  -moz-box-shadow: 5px 5px 0px 0px #240828;
+}

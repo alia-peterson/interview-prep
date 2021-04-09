@@ -1,0 +1,9 @@
+.flashcard {
+  background-color: #37123C;
+  height: 300px;
+  width: 500px;
+  margin-bottom: 15px;
+  box-shadow: 10px 10px 0px 0px #240828;
+  -webkit-box-shadow: 10px 10px 0px 0px #240828;
+  -moz-box-shadow: 10px 10px 0px 0px #240828;
+}
